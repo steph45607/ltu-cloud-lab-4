@@ -5,17 +5,22 @@ function Task(props){
 }
 
 function List(props) {
-	var taskArray = [];
-	for(let i = 0; i < props.tasks.length; i++){
-		let desc = props.tasks[i].description;
-		let stat = props.tasks[i].completed;
-		taskArray.push(<Task description={desc} completed={stat}></Task>)
-	}
+	// var taskArray = [];
+	// for(let i = 0; i < props.tasks.length; i++){
+	// 	let desc = props.tasks[i].description;
+	// 	let stat = props.tasks[i].completed;
+	// 	taskArray.push(<Task description={desc} completed={stat}></Task>)
+	// }
 	return (
 		<div>
 			<h1>{ props.heading }</h1>
 			<ul>
-				{taskArray}
+				{/* {taskArray} */}
+				{props.tasks.map(task=>
+					<Task
+					description={task.description}
+					completed={task.completed}/>
+				)}
 			</ul>
 		</div>
 	);

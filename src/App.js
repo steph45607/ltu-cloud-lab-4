@@ -6,6 +6,7 @@ const tasks=[
     { description: "Steph", completed:false},
     { description: "Stanis", completed:false},
     { description: "Winata", completed:true},
+    { description: "Phanya", completed:true},
 ]
 
 function App() {
